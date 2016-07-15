@@ -22,17 +22,13 @@ public class Main {
      * @param args параметры запуска программы
      */
     public static void main(String[] args) {
-        /** Создаем три элемента светофора */
         SignalLight greenSignal = new SignalLight(Color.GREEN, DURATION_GREEN);
         SignalLight yellowSignal = new SignalLight(Color.YELLOW, DURATION_YELLOW);
         SignalLight redSignal = new SignalLight(Color.RED, DURATION_RED);
         /** Создаем массив элементов светофора. Очередность важна */
         SignalLight[] signalLights = {greenSignal, yellowSignal, redSignal};
-        /** Создаем объект светофора */
         TrafficLight trafficLight = new TrafficLight(signalLights);
-        /** Создаем объект для взаимодействия в консоли */
         ConsoleView consoleView = new ConsoleView(trafficLight);
-        /** Запускаем взаимодействия в консоли с пользователем */
         consoleView.start();
     }
 }
